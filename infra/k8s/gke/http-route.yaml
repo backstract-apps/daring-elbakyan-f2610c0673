@@ -1,0 +1,22 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: daring-elbakyan-f2610c0673-route
+  namespace: apps-release
+spec:
+  parentRefs:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: lcnc-gateway
+      namespace: default
+      sectionName: https
+  hostnames:
+    - "cc1fbde45ead-in-south-02.mayson.dev"
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /eu-central-1-backstractelb-066c98-coll-f79909739aa0486cb803d14820294d58
+      backendRefs:
+        - name: daring-elbakyan-f2610c0673-srv
+          port: 80
