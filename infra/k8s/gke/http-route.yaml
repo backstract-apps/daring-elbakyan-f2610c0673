@@ -18,6 +18,5 @@ spec:
             type: PathPrefix
             value: /eu-central-1-backstractelb-066c98-coll-f79909739aa0486cb803d14820294d58
       backendRefs:
-        - name: keda-add-ons-http-interceptor-proxy
-          namespace: keda
+        - name: keda-interceptor-proxy
           port: 8080
