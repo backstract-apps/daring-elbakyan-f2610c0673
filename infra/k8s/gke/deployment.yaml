@@ -22,7 +22,7 @@ metadata:
     app: daring-elbakyan-f2610c0673
     release: prometheus
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: daring-elbakyan-f2610c0673
